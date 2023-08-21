@@ -8,8 +8,6 @@ perimetro = base*2+ altura*2
 print("El area es de",area)
 print("El perimetro es de",perimetro)
 
-
-
 # Ejercicio 2
 cateto1 = float(input("Ingesa cateto 1 : "))
 print("cateto 1 es: "+str(cateto1))
