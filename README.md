@@ -1,4 +1,4 @@
-# Repositorio_programacion
+# Repositorio_programación
 
 Se encuentran disponibles: 
 - Trabajo Practico N° 1 (parte 1 - 2)
