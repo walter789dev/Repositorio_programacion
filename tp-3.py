@@ -1,16 +1,16 @@
-# Ejercitación 1:
+# Exercise 1:
 
 word = input("Introduzca una palabra: ")
 for i in range(10):
    print(f"Tu palabra es: {word}")
    
-#Ejercicio 2:
+#Exercise 2:
 
 age = int(input("Introduzca su edad: "))
 for i in range(1, age):
    print(f"Edad: {i}")
 
-#Ejercicio 3:
+#Exercise 3:
 
 numbers = []
 number_post = int(input("Introduzca un número positivo: "))
@@ -22,7 +22,7 @@ for i in range(number_post):
 t_numbers = ",".join(numbers)
 print(t_numbers)
 
-# Ejercicio 4:
+# Exercise 4:
 
 numbers = []
 number_post = int(input("Introduzca un número positivo: "))
@@ -37,50 +37,50 @@ t_numbers = ",".join(numbers)
 print(t_numbers)
 
 
-#Ejercicio 5: 
+#Exercise 5: 
 
-cant_inv = int(input("Ingrese monto a invertir: "))
-a_interes = int(input("Ingrese interes anual: "))
+amount_inv = int(input("Ingrese monto a invertir: "))
+a_interest = int(input("Ingrese interes anual: "))
 inv_age = int(input("Ingrese años a invertir: "))
 
-total_inv = cant_inv
+total_inv = amount_inv
 i = 1
 
 while i <= inv_age:
-   total_inv += a_interes * cant_inv / 100
+   total_inv += a_interest * amount_inv / 100
    print(f"Año {i}: ${total_inv}")
    i += 1
 
 
-#Ejercicio 6:
+#Exercise 6:
 
 text = "*"
-altura = int(input("Introduzca un número: "))
+height = int(input("Introduzca un número: "))
 i = 1
 
-while i <= altura:
+while i <= height:
    print(text.replace("*", "*" * i))
    i += 1
 
-# Ejercicio 7: 
+# Exercise 7: 
 
 for i in range(1, 11):
    for j in range(1, 11):
       print(f"{i} x {j} = {i * j}")
 
-# Ejercicio 8:
+# Exercise 8:
 
-numeros = ["1"]
-altura = int(input("Introduzca un número: "))
+numbers = ["1"]
+height = int(input("Introduzca un número: "))
 i = 0
 
-while i < altura:
-   print(" ".join(numeros))
-   numb = int(numeros[0]) + 2
-   numeros.insert(0, str(numb))
+while i < height:
+   print(" ".join(numbers))
+   numb = int(numbers[0]) + 2
+   numbers.insert(0, str(numb))
    i += 1
 
-#Ejercicio 9:
+#Exercise 9:
 
 password = "contraseña"
 val = 1
@@ -93,21 +93,21 @@ while val != 0:
    else:
       print("Intente nuevamente !!")
        
-#Ejercicio 10:
+#Exercise 10:
 
 v_number = int(input("Ingrese un numero: "))
-primo = 1
+cousin = 1
 
 for i in range(2, v_number):
     if (v_number % i) == 0:
-       primo = 0
+       cousin = 0
 
-if primo == 1:
+if cousin == 1:
    print("El número es primo")
 else: 
    print("El número no es primo")
 
-# Ejercicio 11:
+# Exercise 11:
 
 word = input("Introduzca una palabra: ")
 chars = list(word)
@@ -117,20 +117,20 @@ while i >= 0:
    print(f"Letra {i}: {chars[i]}")
    i -= 1
 
-#Ejercicio 12:
+#Exercise 12:
 
-frase = input("Ingrese una frase: ")
-c_letra = input("Ingrese letra a buscar: ")
+phrase = input("Ingrese una frase: ")
+c_char = input("Ingrese letra a buscar: ")
 count = 0
-chars = list(frase)
+chars = list(phrase)
 
 for i in range(len(chars)):
-   if frase[i].lower() == c_letra.lower():
+   if phrase[i].lower() == c_char.lower():
       count += 1
 else:
-   print(f"La letra {c_letra} se encuentra {count} vez/veces")
+   print(f"La letra {c_char} se encuentra {count} vez/veces")
 
-# Ejercicio 13:
+# Exercise 13:
 
 val = 1
 while val != 0:
@@ -141,7 +141,7 @@ while val != 0:
    else:
       val = 0
 
-# Ejercico 14:
+# Exercise 14:
 
 numb1 = int(input("Ingrese un número entero: "))
 numb2 = int(input("Ingrese un otro número entero: "))
@@ -159,106 +159,106 @@ while numb2 <= numb1:
       print(f"El numero {numb2} es impar")
    numb2 += 1
 
-# Ejercicio 15: 
+# Exercise 15: 
 
-divisores = []
+dividers = []
 numb = int(input("Ingrese un número entero: "))
 
 for i in range(1, numb):
    if (numb % i) == 0:
-      divisores.append(str(i))
+      dividers.append(str(i))
 
-print(f"Los divisores de {numb} son: {', '.join(divisores)}")
+print(f"Los divisores de {numb} son: {', '.join(dividers)}")
 
-# Ejercicio 16: 
+# Exercise 16: 
 
-cantidad_numb = int(input("Ingrese cantidad de numeros a introducir: "))
+amount_numb = int(input("Ingrese cantidad de numeros a introducir: "))
 count = 0
 
-while cantidad_numb > 0:
+while amount_numb > 0:
    number = int(input("Ingrese un numero: "))
    if number < 0:
       count += 1
-   cantidad_numb -= 1
+   amount_numb -= 1
 
 print(f"La cantidad de números negativos: {count}")
 
-# Ejercicio 17:
+# Exercise 17:
 
-vocales = ["a", "e", "i", "o", "u"]
-frase = input("Ingrese una frase: ")
-frase = frase.lower()
-i = len(vocales) - 1
+vowels = ["a", "e", "i", "o", "u"]
+phrase = input("Ingrese una frase: ")
+phrase = phrase.lower()
+i = len(vowels) - 1
 
 while i >= 0:
-   val = frase.find(vocales[i])
+   val = phrase.find(vowels[i])
    if val == -1:
-      vocales.pop(i)
+      vowels.pop(i)
    i -= 1
    
-print(f"Las vocales encontradas son: {', '.join(vocales)}")
+print(f"Las vocales encontradas son: {', '.join(vowels)}")
 
 
-# Ejercicio 18:
+# Exercise 18:
 
-contador = [0, 1]
+counter = [0, 1]
 
 for i in range(10):
    if i == 0 or i == 1:
       print(f"Numero {i + 1}: {i}")
    else: 
-      aux = contador[0]
-      contador[0] = contador[1]
-      contador[1] = contador[1] + aux
-      print(f"Numero {i + 1}: {contador[1]}")
+      aux = counter[0]
+      counter[0] = counter[1]
+      counter[1] = counter[1] + aux
+      print(f"Numero {i + 1}: {counter[1]}")
 
-# Ejercicio 19:
+# Exercise 19:
 
 total = 0
-cantidad_ahorro = int(input("Ingrese monto a conseguir: "))
+amount_saving = int(input("Ingrese monto a conseguir: "))
 
-while total <= cantidad_ahorro:
-   ahorro = int(input("Monto a ahorrar: "))
-   if ahorro < 0:
+while total <= amount_saving:
+   save = int(input("Monto a ahorrar: "))
+   if save < 0:
       print("Monto incorrecto, intente nuevamente")
    else:
-      total += ahorro
+      total += save
       
 print(f"Ahorro conseguido: ${total}")
 
-# Ejercicio 20:
+# Exercise 20:
 
-suma = 0
+add = 0
 val = 1
 
 while val != 0:
    numb = int(input("Introduzca un número: "))
    if numb != 0:
-      suma += numb
+      add += numb
    else: 
       val = 0
 else: 
-   print(f"La sumatoria de valores es de: {suma}")
+   print(f"La sumatoria de valores es de: {add}")
 
-# Ejercicio 21:
+# Exercise 21:
 
-mayor = 0
+bigger = 0
 val = 1
 
 while val != 0:
    numb = int(input("Introduzca un número: "))
    if numb != 0:
       if numb > mayor:
-         mayor = numb
+         bigger = numb
    else: 
       val = 0
 else: 
-   print(f"El mayor valor es: {mayor}")
+   print(f"El mayor valor es: {bigger}")
 
-# Ejercicio 22:
+# Exercise 22:
 
-suma = 0
-par = 0
+add = 0
+pair = 0
 val = 1
 
 while val != 0:
@@ -268,40 +268,40 @@ while val != 0:
          par += 1
       number = list(str(number))
       for i in range(len(number)):
-         suma += int(number[i])
-         print(f"La suma de digitos es de: {suma}")
-         suma = 0
+         add += int(number[i])
+         print(f"La suma de digitos es de: {add}")
+         add = 0
    else:
       val = 0
 else:
-   print(f"Numeros pares: {par}")
+   print(f"Numeros pares: {pair}")
 
-# Ejercicio 23 y 24:
+# Exercise 23 y 24:
 
 total = 0
 val = 1
 
 while val != 0:
-   monto = int(input("Ingrese monto de compra: "))
-   if monto < 0:
+  amount = int(input("Ingrese monto de compra: "))
+   if amount < 0:
       print("Monto invalido, intente nuevamente !!!")
-   elif monto != 0:
-      total += monto
+   elif amount != 0:
+      total += amount
    else: 
       val = 0
 else: 
    if total > 1000:
-      descuento = total * .10
-      print(f"Monto total: ${total - descuento}")
+      discount = total * .10
+      print(f"Monto total: ${total - discount}")
    else:
       print(f"Monto total: ${total}")
 
-# Ejercicio 25:
+# Exercise 25:
 
-numero = int(input("Ingrese un número: "))
+number = int(input("Ingrese un número: "))
 total = 1
 
-for i in range(1, numero + 1):
+for i in range(1, number + 1):
    total *= i
 else: 
-   print(f"El factorial de {numero} es de: {total}")
+   print(f"El factorial de {number} es de: {total}")
