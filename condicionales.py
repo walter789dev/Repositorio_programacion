@@ -1,6 +1,6 @@
 dias_semana = ["lunes","martes","miercoles","jueves","viernes"]
 
-print("Ingrese fecha")
+print("Ingrese fecha en formato: dia, DD/DD")
 fecha = input("Dia: ") + ", " + input("Dia del Mes: ") + "/" + input("Numero del Mes: ")
 
 dia = fecha[0: fecha.find(",")].lower() # Extraer el dia de fecha
