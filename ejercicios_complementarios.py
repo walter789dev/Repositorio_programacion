@@ -70,7 +70,7 @@ nombre_completo = "WALTER PLAZA"
 print(nombre_completo.lower())
 
 # 16. Por último, con la variable con el nombre en mayúsculas, aplica un método parecido para que se transforme todo en minúsculas excepto la primera letra.
-print(nombre_completo.capitalize())
+print(nombre_completo.title())
 
 
 
