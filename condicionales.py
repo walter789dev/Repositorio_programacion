@@ -1,7 +1,6 @@
 dias_semana = ["lunes","martes","miercoles","jueves","viernes"]
 
-print("Ingrese fecha en formato: dia, DD/DD")
-fecha = input("Dia: ") + ", " + input("Dia del Mes: ") + "/" + input("Numero del Mes: ")
+fecha = input("Ingrese fecha en formato: dia, DD/MM: ")
 
 dia = fecha[0: fecha.find(",")].lower() # Extraer el dia de fecha
 dia_valido = dia not in dias_semana # Validar el ingreso correcto de los dias de la semana
