@@ -62,21 +62,16 @@ print(media)
 
 # Ejercicio 7
 
-minutos_1=int(input("ingresar minutos a transformar "))
-hora_1=0
-con__="False"
-while con__=="False":
-    if(minutos_1>=60):
-        minutos_1=minutos_1-60
-        hora_1=hora_1+1
-    else:
-        con__="true"
-if(hora_1==0):
-    print ("corresponde a",minutos_1,"minutos")
-elif (hora_1==1):
-    print ("corresponde a", hora_1,"hora y",minutos_1,"minutos")
-else:
-    print ("corresponde a", hora_1,"horas",minutos_1,"minutos")
+minutos=int(input("Ingrese minutos a transformar: "))
+minutos_extra = 0
+
+if (minutos / 60) % 2 != 0:
+   horas = round(minutos / 60) - 1
+   minutos_extra = minutos % 60
+else: 
+   horas = minutos / 60
+
+print(f"{minutos} corresponde a: {horas}hr/s con {minutos_extra} minuto/s")
 
 # Ejercicio 8
 sueldo = 5000
@@ -135,59 +130,22 @@ print("Numero A: ", numeroa, " Numero B ", numerob)
 
 # Ejercicio 15 #se pide a que hora salio
 
-hora_ini=int(input("ingresar a la hora que salio el ciclista: "))
-minutos_ini=int(input("ingresar a los minutos que salio el ciclista: "))
-segundos_ini=int(input("ingresar a los segundos que salio el ciclista: "))
-  #se pide a que hora va a esta en la ciudad b
-hora_tar=int(input("ingresar tiempo en hora que va a tardar(sin contar minutos o segundos): "))
-minutos_tar=int(input("ingresar los minutos: "))
-segundos_tar=int(input("ingresar los segundos: "))
-  #sumo los tiempos  
-segundos_to=segundos_ini+segundos_tar
-minutos_to=minutos_ini+minutos_tar
-hora_to=hora_ini+hora_tar
- #ahora los voy a pasar a hora minutos segundos
-con_="False"
-while con_=="False":
+seconds_init = int(input("Ingrese el tiempo de viaje en segundos: "))
+hours = seconds_init / 3600
+minutes = 0
+seconds = 0
+
+if hours % 2 != 0:
+   hours = round(hours) - 1 if hours % 2 >= 0.5 else round(hours)
+   extra = seconds_init % 3600
+   minutes = extra / 60
    
-    if (segundos_to>=60):
-        segundos_to=segundos_to-60
-        minutos_to=minutos_to+1
-    elif(minutos_to>=60):
-        minutos_to=minutos_to-60
-        hora_to=hora_to+1
-    else:
-        con_="true"
-
-print("llego a las ",hora_to,"horas ",minutos_to,"minutos y",segundos_to," segundos")
-
-
- #se pide a que hora salio
-hora_ini=int(input("ingresar a la hora que salio el ciclista: "))
-minutos_ini=int(input("ingresar a los minutos que salio el ciclista: "))
-segundos_ini=int(input("ingresar a los segundos que salio el ciclista: "))
-  #se pide a que hora va a esta en la ciudad b
-hora_tar=int(input("ingresar tiempo en hora que va a tardar(sin contar minutos o segundos): "))
-minutos_tar=int(input("ingresar los minutos: "))
-segundos_tar=int(input("ingresar los segundos: "))
-  #sumo los tiempos  
-segundos_to=segundos_ini+segundos_tar
-minutos_to=minutos_ini+minutos_tar
-hora_to=hora_ini+hora_tar
- #ahora los voy a pasar a hora minutos segundos
-con_="False"
-while con_=="False":
+   if minutes % 2 != 0:
+      minutes = round(minutes) - 1 if minutes % 2 >= 0.5 else round(minutes)
    
-    if (segundos_to>=60):
-        segundos_to=segundos_to-60
-        minutos_to=minutos_to+1
-    elif(minutos_to>=60):
-        minutos_to=minutos_to-60
-        hora_to=hora_to+1
-    else:
-        con_="true"
+   seconds = extra % 60
 
-print("llego a las ",hora_to,"horas ",minutos_to,"minutos y",segundos_to," segundos")
+print(f"El viaje demoro: {hours}hr/s con {minutes}min y {seconds}s")
 
 # Ejercicio 16
 nombre = input("Ingrese su nombre ")
@@ -218,10 +176,8 @@ print(dia,"/",mes,"/",anio)
  
 
 # Ejercicio 20
-nac = str(input("Ingrese el dia de su nacimiento"))
-nac = nac + "/" + input("Ingrese el mes de su nacimiento")
-nac = nac + "/" + input("Ingrese el dia de su nacimiento")
-print(nac)
+age = input("Ingres fecha de nacimiento en formato DDMMAAAA: ")
+print(f"Fecha: {age[0:2]}/{age[2:4]}/{age[4:8]}")
 
 # Ejercicio 21
 kilometro_litro = int(input("ingrese cantidad de kilometros por litro: "))
