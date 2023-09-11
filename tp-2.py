@@ -13,7 +13,7 @@ else:
 nombre1 = input("ingresa nombre 1: ")
 nombre2 = input("ingresa nombre 2: ")
 
-if (nombre1[0] == nombre2[0]):
+if (nombre1[0].lower() == nombre2[0].lower()):
     print("Coincidencia")
 else:
     print("No hay coincidencia")  
@@ -33,12 +33,13 @@ elif voto == "candidato c" or voto=="c":
 # Ejercicio 5 
 
 letra = input("Ingrese una letra: ")
-if (letra == "a" or letra == "e" or letra == "i" or letra == "o" or letra == "u"):
-    print("Es una vocal.")
+
+if (len(letra) != 0):
+   print("No se puede procesar el dato")
 elif (letra != "a" and letra != "e" and letra != "i" and letra != "o" and letra != "u"):
-    print("No es una vocal")
-elif (len(letra) != 0):
-    print("No se puede procesar el dato")
+   print("No es una vocal")
+elif (letra == "a" or letra == "e" or letra == "i" or letra == "o" or letra == "u"):
+   print("Es una vocal.")
 
 # Ejercicio 6 
 
@@ -74,9 +75,8 @@ else:
     print("Acceso denegado")
 
 # Ejercicio 9 
-
 nombre = input("Ingrese su nombre: ").lower()
-sexo = input("Ingrese su genero (hombre/mujer): ")
+sexo = input("Ingrese su genero (hombre/mujer): ").lower()
 inicial = nombre[0]
 if (sexo == "mujer" and inicial <= "m") or (sexo == "hombre" and inicial >= "n"):
     print("GRUPO A")
@@ -100,21 +100,29 @@ orden = input("¿Quiere el menu vegetariano? si/no ")
 orden = orden.lower()
 
 if(orden=="si" or orden =="s"):
-     print("Ingredientes vegetarianos:")
-     print(".Pimiento")
-     print(".Tofu")
+   print("Ingredientes vegetarianos:")
+   print(".Pimiento")
+   print(".Tofu")
+     
+   ingrediente = input("Que ingrediente quieres?: ").lower()
+   
+   if ingrediente != "pimiento" or ingrediente != "tofu":
+      print("Ingrediente invalido")
+   else: 
+      print("Su pizza vegetariana tiene: mozzarella, tomate y", ingrediente)
+     
 elif(orden=="no" or orden =="n"):
-    print("Ingredientes no vegetarianos:")
-    print(".Peperoni")
-    print(".Jamón")
-    print(".Salmón")
-
-ingrediente = input("Que ingrediente quieres?: ")
-
-if(orden=="si" or orden =="s"):
-     print("Su pizza vegetariana tiene: mozzarella, tomate y", ingrediente)
-elif(orden=="no" or orden =="n"):
-     print("Su pizza tiene: mozzarella, tomate y",ingrediente)
+   print("Ingredientes:")
+   print(".Peperoni")
+   print(".Jamón")
+   print(".Salmón")
+    
+   ingrediente = input("Que ingrediente quieres?: ").lower()
+   
+   if ingrediente != "peperoni" or ingrediente != "jamon" or ingrediente != "salmon":
+      print("Ingrediente invalido")
+   else: 
+      print("Su pizza vegetariana tiene: mozzarella, tomate y", ingrediente)
 
 # Ejercicio 12 
 
@@ -159,15 +167,15 @@ else:
 
 #Ejercicio 14 
 print("Ingrese los coeficientes de una ecuación de primer grado (a x + b = 0)")
-coe_a=int(input("Ingrese ¨a¨ "))
-coe_b=int(input("Ingrese ¨b¨ "))
-respues_=-coe_b/coe_a
-coe_a=str(coe_a)
-coe_b=str(coe_b)
-respues_=str(respues_)
-print("El valor de x es: "+respues_)
-print("La formula quedaria: "+coe_a
-      +"*"+respues_+"+"+coe_b+"="+"0")
+coe_a=int(input("Ingrese a: "))
+coe_b=int(input("Ingrese b: "))
+
+if coe_a == 0: 
+   print("La formula quedaria: " + str(coe_b) + " = 0")
+else: 
+   respues_ = coe_b / coe_a
+   print("El valor de x es: "+ str(respues_))
+   print("La formula quedaria: "+ str(coe_a) + " * " + str(respues_) + " + " + str(coe_b) + " = " + "0")
 
 #Ejercicio 15: 
 
@@ -204,10 +212,12 @@ elif operacion == 2:
 elif operacion == 3:
   print(f"Resultado: {valor1 - valor2}")
 elif operacion == 4:
-  print(f"Resultado: {valor1 / valor2}")
+   if valor2 == 0: 
+      print("No se puede dividir por 0")
+   else:
+      print(f"Resultado: {valor1 / valor2}")
 else:
   print("Operacion invalida")
-
 
 #Ejercicio 17: 
 
