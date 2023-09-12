@@ -8,3 +8,4 @@ Se encuentran disponibles:
 - Tp for-while
 - Trabajo Practico N°3
 - Trabajo Practico N°4
+- Repaso Parcial
