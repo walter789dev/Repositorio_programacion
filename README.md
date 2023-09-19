@@ -10,3 +10,4 @@ Se encuentran disponibles:
 - Trabajo Practico N°4
 - Repaso Parcial
 - Repaso Parcial 2
+- Funciones
