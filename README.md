@@ -1,6 +1,6 @@
 # Repositorio_programación
 
-![Imagen ilustrativa de lenguaje](python.png)
+![Imagen ilustrativa de lenguaje](phyton.png)
 
 Se encuentran disponibles: 
 - Trabajo Practico N° 1 (parte 1 - 2)
