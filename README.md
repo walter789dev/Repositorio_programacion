@@ -14,3 +14,4 @@ Se encuentran disponibles:
 - Repaso Parcial 2
 - Funciones
 - Trabajo Practico N°5 + Testing con Pytest
+- Variables Dimensionadas
