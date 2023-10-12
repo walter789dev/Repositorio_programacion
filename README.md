@@ -15,3 +15,4 @@ Se encuentran disponibles:
 - Funciones
 - Trabajo Practico N°5 + Testing con Pytest
 - Variables Dimensionadas
+- Ordenamiento y Busqueda
