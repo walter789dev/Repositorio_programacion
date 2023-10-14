@@ -16,4 +16,5 @@ Se encuentran disponibles:
 - Trabajo Practico N°5 + Testing con Pytest
 - Variables Dimensionadas
 - Ordenamiento y Busqueda
+- Trabajo Practico N°6
 - Trabajo Practico N°7
