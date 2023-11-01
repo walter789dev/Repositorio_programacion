@@ -10,8 +10,8 @@ Se encuentran disponibles:
 - Tp for-while
 - Trabajo Practico N°3
 - Trabajo Practico N°4
-- Repaso Parcial
-- Repaso Parcial 2
+- Repaso Parcial N°1
+- Repaso 2 Parcial N°1
 - Funciones
 - Trabajo Practico N°5 + Testing con Pytest
 - Variables Dimensionadas
@@ -22,3 +22,4 @@ Se encuentran disponibles:
 - Trabajo Practico N°8
 - Ejercitacion Clases
 - Trabajo Practico N°9
+- Repaso Parcial N°2
